@@ -1,0 +1,90 @@
+:root {
+    --lightblue: #087e8b;
+    --white: #ffffff;
+    --purple: #c2aff0;
+  }
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "picture picture"
+    "products products"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 10fr 1fr;
+  gap: 5px;
+  background-color: #2196f3;
+  padding: 5px;
+}
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container > div.main {
+  grid-area: main;
+}
+.container > div.picture {
+  grid-area: picture;
+}
+.container > div.products {
+  grid-area: products;
+}
+.container > div.footer {
+  grid-area: footer;
+}
+
+nav {
+    background-color: none;
+    color: var(--white);
+    padding: 1rem;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Title {
+    font-family: "Oooh Baby", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+ /* Used AI to figure out how to do this nav links fron the menu as a dropdown */
+.nav-links {
+    display: none;
+    flex-direction: column; 
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+.nav-links.active {
+    display: flex;
+}
+  
+@media screen and (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+    }
+    .menu-icon {
+        display: none;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Lily Bakery</title>
+    <link rel="icon" type="image/x-icon" href="/Images/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f26a639e67.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<main>
+    <div class="container">
+        <div class="header">
+            <header class="header">
+                <!-- Navigation -->
+                <nav>
+                    <div class="container nav-container">
+                        <div class="Title">
+                            <span>Water Lily Bakery</span>
+                        </div>
+                        <div class="nav-links">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Buy Now</a>
+                            <a href="#newsletter">Contact Us</a>
+                            <a href="#">Cart</a>
+                        </div>
+                        <div class="menu-icon">☰</div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="main">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet.
+                Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis
+                ligula lobortis quam ut.</p>
+        </div>
+        <div class="picture">
+            <p>This is a Picture page I am hoping that it works</p>
+        </div>
+        <div class="products">
+            <p>This is the products</p>
+        </div>
+        <div class="footer">
+            <h4>Footer</h4>
+        </div>
+    </div>
+</main>
+
+<script>
+//Honestly I dont how how this really works I I used Ai to help me figure it out.
+//Select the menu icon and the nav links
+const menuIcon = document.querySelector('.menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+// Add an event listener to the menu icon
+menuIcon.addEventListener('click', () => {
+    // Toggle the 'active' class to show or hide the nav links
+    navLinks.classList.toggle('active');
+});
+</script>

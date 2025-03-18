@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Lily Bakery</title>
+    <link rel="icon" type="image/x-icon" href="/Images/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f26a639e67.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<main>
+
+    <header class="header">
+        <!-- Navigation -->
+        <nav>
+            <div class="container nav-container">
+                <div class="Title">
+                    <span>Water Lily Bakery</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Buy Now</a>
+                    <a href="#newsletter">Contact Us</a>
+                    <a href="#">Cart</a>
+                </div>
+                <div class="menu-icon">☰</div>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <!-- Product Section -->
+        <section class="bg-light"></section>
+        <div class="container-product">
+            <div class="Product">
+                <div class="product-card">
+                    <!--Images were found using the Sites presented on the the UTP Presentation, Pixels and Unsplash-->
+                    <!--ADDD THE Carousel HERE-->
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext"></div>
+                            <img src="/Images/Chocolate Chip Landscape.jpg" alt="Chocolate Chip Cookie">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext"></div>
+                            <img src="/Images/cookies with milk.jpg" alt="Chocolate Chip Cookie with milk">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext"></div>
+                            <img src="/Images/Cookies ready to bake.jpg" alt="Chocolate Chip Cookies Ready to Bake">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <div class="card-content">
+                        <h1>Chocolate-Chip Cookies</h1>
+                        <h2>Homemade Freshly-Baked Cookies</h2>
+
+                        <label for="type-of-cookie">Choose a type of chocolate chips:</label>
+
+                        <select name="type-of-cookie" id="chips">
+                            <option value="Semi-sweet">Semi-Swet Chocolate Chips</option>
+                            <option value="Milk Chocolate">Milk Chocolate Chips</option>
+                        </select>
+
+                        <h3>Starting at $1</h3>
+                        <p>Available to purchase individually for pickup at the Provo Farmers market Saturdays or
+                            with
+                            24
+                            hours notice by the dozen</p>
+                        <div class="card-button-layout">
+                            <button class="btn">Add to Cart</button>
+                            <br>
+                        </div>
+                        <p id="Disclaimer">For home consumption only and not for resale. May not be sold to, or used
+                            by,
+                            a
+                            restaurant or commercial establishment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Product Page Section -->
+
+        <section class="Page Product Section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Other Products</h2>
+                    <p>Find something to satisfy your cravings!</p>
+                </div>
+
+                <div class="other-products-card">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/Images/Valentines Cookies.jpg" alt="Valentines Royal Icing Cookies">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Confetti Cookies</h3>
+                            <p>Fun Sprinkle Filled Cookies cookies that are perfect for kids or adults</p>
+                            <div class="card-button-layout">
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/Images/Confetti-Cookies.jpg" alt="Confetti Cookies">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Confetti Cookies</h3>
+                            <p>Fun Sprinkle Filled Cookies cookies that are perfect for kids or adults</p>
+                            <div class="card-button-layout">
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/Images/Cheesecake.jpg" alt="Cheesecake">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Cheesecake</h3>
+                            <p>Homade Silky cheesecake with Whipped Cream and fresh Berries</p>
+                            <div class="card-button-layout">
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <section class="Cookie-Video">
+            <div class="Video">
+                <video autoplay muted loop>
+                    <source src="/Video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                <div class="overlay">
+                 <p>Fresh from our oven to your home!</p>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter" id="newsletter">
+            <div class="container">
+                <h2>Stay Updated on the Bakery </h2>
+                <p>Join our newsletter to receive the latest updates on events, exclusive content, and sales.</p>
+                <form>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email"><br><br>
+                    <input type="checkbox" id="consenttoemails" value="True">
+                    <label for="consenttoemails"> I Consent to Recieving Emails and Updates from the Bakery</label>
+                    <br><br>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+</main>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-placeholder">
+                    <div class="facebook"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="email"><i class="fa-solid fa-envelope"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+
+<!--Honesty I dont really know what this is but I included it from a website that was helping me with the slideshow element and it workds-->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+</html>
+
+<!--Used AI to figure out how to do smooth scrooling! I loved learning this because I use it almost every day on websites that have recipies and was curious how they did it-->
