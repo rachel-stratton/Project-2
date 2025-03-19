@@ -20,7 +20,6 @@ body{
     "products"
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: auto 2fr auto 10fr 1fr;
   gap: 5px;
   background-color: #2196f3;
   padding: 5px;
@@ -28,27 +27,32 @@ body{
 }
 .container > div {
   background-color: rgba(255, 255, 255, 0.8);
+  gap: 5px;
 }
-.container > div.header {
+.container > header {
   grid-area: header;
   text-align: center;
+  background-color: aquamarine;
 }
 
-.container > div.main {
+.container > main {
   grid-area: main;
-  border: solid salmon;
+  background-color: #c2aff0;
 }
 
-.container > div.picture {
+.container > section.picture {
   grid-area: picture;
+  background-color: salmon;
 }
 
-.container > div.products {
+.container > section.products {
   grid-area: products;
+  background-color: yellow;
 }
 
-.container > div.footer {
+.container > footer {
   grid-area: footer;
+  background-color: orange;
 }
 /*Styling for the Promo Annimation - Used ideas and help from AI*/
 
@@ -178,8 +182,78 @@ nav {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-  
-@media screen and (min-width: 768px) {
+.other-products-card {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  background-color: var(--purple);
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.card {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-image {
+  height: 200px;
+  background-color: #666;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-location {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.card-button-layout {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-button-layout button.btn {
+  transition: all 0.3s ease;
+}
+
+.card-button-layout button.btn:hover {
+  transform: scale(1.05);
+  background-color: var(--lightblue);
+  box-shadow: #aaa 0 0 10px;
+}
+
+
+/* Everything for phone */  
+@media screen and (min-width: 480px) {
     .nav-links {
         display: flex;
         flex-direction: row;
@@ -188,4 +262,13 @@ nav {
     .menu-icon {
         display: none;
     }
+}
+
+/* Everything for Tablet */  
+@media screen and (min-width: 625px) {
+}
+
+/* Everything for Laptops */  
+@media screen and (min-width: 1400) {
+
 }
