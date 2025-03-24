@@ -10,6 +10,46 @@ body{
   align-items: center;
   margin: 0;
 }
+/* General page styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Parallax section styles */
+.parallax-section {
+  position: relative;
+  background-image: url('/Images/Chocolate\ Chip\ Landscape.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.parallax-section .content {
+  z-index: 10;
+}
+
+/* Regular section styles */
+.regular-section {
+  background-color: #f0f0f0;
+  padding: 50px;
+  text-align: center;
+}
+
+.regular-section h2 {
+  margin-bottom: 20px;
+}
+
+.regular-section p {
+  font-size: 1.2em;
+}
 
 .container {
   display: grid;
@@ -18,6 +58,7 @@ body{
     "main"
     "picture"
     "products"
+    "background"
     "footer";
   grid-template-columns: 1fr;
   gap: 5px;
@@ -47,13 +88,18 @@ body{
 
 .container > section.products {
   grid-area: products;
-  background-color: yellow;
 }
 
-.container > footer {
+.container > background {
+  grid-area: background;
+  background-color: purple;
+}
+
+.footer > footer {
   grid-area: footer;
   background-color: orange;
 }
+
 /*Styling for the Promo Annimation - Used ideas and help from AI*/
 
 .Promo-container {
