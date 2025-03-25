@@ -24,7 +24,7 @@ body, html {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,18 +62,16 @@ body, html {
     "footer";
   grid-template-columns: 1fr;
   gap: 5px;
-  background-color: #2196f3;
   padding: 5px;
   width: 90%;
 }
 .container > div {
-  background-color: rgba(255, 255, 255, 0.8);
   gap: 5px;
 }
 .container > header {
   grid-area: header;
   text-align: center;
-  background-color: aquamarine;
+  background-color: var(--lightblue);
 }
 
 .container > main {
@@ -83,7 +81,6 @@ body, html {
 
 .container > section.picture {
   grid-area: picture;
-  background-color: salmon;
 }
 
 .container > section.products {
@@ -92,12 +89,10 @@ body, html {
 
 .container > background {
   grid-area: background;
-  background-color: purple;
 }
 
 .footer > footer {
   grid-area: footer;
-  background-color: orange;
 }
 
 /*Styling for the Promo Annimation - Used ideas and help from AI*/
@@ -110,7 +105,7 @@ body, html {
 }
 
 .Promo-banner {
-  background-color: #f8b400; 
+  background-color: #0a7c59; 
   color: #fff;
   text-align: center;
   padding: 10px 0;
@@ -168,7 +163,7 @@ nav {
 
 .nav-links.active {
     display: flex;
-    background-color: #c2aff0;
+    background-color: whitesmoke;
     font-size: medium;
 }
 
@@ -178,7 +173,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: blue;
+  color: var(--lightblue);
   text-decoration: none;
 }
 /*Formating the Slideshow of Pictures
@@ -226,6 +221,16 @@ nav {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+#chips {
+  background-color: #2c365e;
+  color: var(--white);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px, 5px, 5pc, 5px;
 }
 
 .other-products-card {
@@ -288,15 +293,122 @@ nav {
 }
 
 .card-button-layout button.btn {
-  transition: all 0.3s ease;
+  width: 50%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--lightblue); 
+  color: white; 
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
 }
 
 .card-button-layout button.btn:hover {
   transform: scale(1.05);
-  background-color: var(--lightblue);
+  background-color: #0a7c59;
   box-shadow: #aaa 0 0 10px;
 }
 
+/* Style for the regular section */
+.regular-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0; /* Change background color of the section */
+}
+
+.regular-section {
+  background-color: #087e8b;
+  color: #f0f0f0;
+}
+/*  Used Chat to syle my form. I didnt do this in the first project so I didnt want to lose points again! And it made it look nice */
+form {
+  width: 80%;
+  max-width: 400px; /* Set a max width for better control on large screens */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Label styling */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 8px;
+  display: block; 
+}
+
+/* Input field styling */
+input[type="text"], input[type="email"] {
+  width: 100%; 
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 16px; 
+  border: 2px solid #ccc; 
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+/* Input field focus effect */
+input[type="text"]:focus, input[type="email"]:focus {
+  border-color: #0a7c59; 
+  outline: none;
+}
+
+/* Button styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #0a7c59; 
+  color: white; 
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+
+
+/* I loved this example you gave so was happy to be abel to do something similar, used AI
+Style for the 'Buy Now' button */
+.buy-now-btn {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0a7c59;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Animation for the bottom border on hover */
+.buy-now-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--white); 
+  transition: width 0.3s ease;
+}
+
+/* Hover effect for the button */
+.buy-now-btn:hover {
+  color: white;
+  background-color: var(--purple);
+}
+
+.buy-now-btn:hover::after {
+  width: 100%;
+}
 
 /* Everything for phone */  
 @media screen and (min-width: 480px) {
