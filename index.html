@@ -84,48 +84,48 @@
 
         <section class="products">
             <section class="Page Product Section">
-                <div class="container">
+                <div class="product-container">
                     <div class="section-header">
                         <h2>Other Products</h2>
                         <p>Find something to satisfy your cravings!</p>
-                    </div>
 
-                    <div class="other-products-card">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="/Images/Valentines Cookies.jpg" alt="Valentines Royal Icing Cookies">
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">Royal Icing Sugar Cookies</h3>
-                                <p>Classic sugar cookies frosted with royal icing for each holiday</p>
-                                <div class="card-button-layout">
-                                    <button class="btn">Add to Cart</button>
+                        <div class="other-products-card">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="/Images/Valentines Cookies.jpg" alt="Valentines Royal Icing Cookies">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Royal Icing Sugar Cookies</h3>
+                                    <p>Classic sugar cookies frosted with royal icing for each holiday</p>
+                                    <div class="card-button-layout">
+                                        <button class="btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="/Images/Confetti-Cookies.jpg" alt="Confetti Cookies">
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">Confetti Cookies</h3>
-                                <p>Fun Sprinkle Filled Cookies cookies that are perfect for kids or adults</p>
-                                <div class="card-button-layout">
-                                    <button class="btn">Add to Cart</button>
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="/Images/Confetti-Cookies.jpg" alt="Confetti Cookies">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Confetti Cookies</h3>
+                                    <p>Fun Sprinkle Filled Cookies cookies that are perfect for kids or adults</p>
+                                    <div class="card-button-layout">
+                                        <button class="btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="/Images/Cheesecake.jpg" alt="Cheesecake">
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">Cheesecake</h3>
-                                <p>Homemade Silky cheesecake with Whipped Cream and fresh Berries</p>
-                                <div class="card-button-layout">
-                                    <button class="btn">Add to Cart</button>
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="/Images/Cheesecake.jpg" alt="Cheesecake">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Cheesecake</h3>
+                                    <p>Homemade Silky cheesecake with Whipped Cream and fresh Berries</p>
+                                    <div class="card-button-layout">
+                                        <button class="btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -147,17 +147,25 @@
         <section class="regular-section">
             <h2>Stay Updated on Sweet Deals</h2>
             <form>
+                <!-- Used Ai to make this acessible using the Aria Labels -->
                 <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter your first name">
-            
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name" aria-required="true"
+                    aria-label="First name input field" required>
+
                 <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" placeholder="Enter your last name">
-            
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name" aria-required="true"
+                    aria-label="Last name input field" required>
+
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
-            
+                <input type="email" id="email" name="email" placeholder="Enter your email" aria-required="true"
+                    aria-label="Email input field" required aria-describedby="email-error">
+
+                <span id="email-error" role="alert" style="color: red; display: none;">Please enter a valid email
+                    address.</span>
+
                 <button type="submit">Submit</button>
-            </form>            
+            </form>
+
         </section>
 
         <!-- Parallax Section 3 -->
@@ -176,11 +184,18 @@
         <footer class="footer">
             <h4>Producer: Jane and John Baker, 580 South Bakers Drive, Provo, Utah 84601</h4>
 
-                <p>For home consumption only and not for resale and may not be sold to, or used by, a restaurant or commercial establishment.</p>
-                
-                <p>This product is not certified, licensed, regulated, or inspected by the State of Utah, any county, or city but allowed under Utah State Code 4-5a-104. It was prepared in a facility that also handles common allergens including milk, soy, wheat, eggs, peanuts or tree nuts, fish, or shellfish.</p>
-                
+            <p>For home consumption only and not for resale and may not be sold to, or used by, a restaurant or
+                commercial establishment.</p>
+
+            <p>This product is not certified, licensed, regulated, or inspected by the State of Utah, any county, or
+                city but allowed under Utah State Code 4-5a-104. It was prepared in a facility that also handles common
+                allergens including milk, soy, wheat, eggs, peanuts or tree nuts, fish, or shellfish.</p>
+
         </footer>
+
+        <div class="button-container">
+            <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+          </div>
 
         <script>
             // Honestly, I don't know how this really works, I used AI to help me figure it out.
@@ -217,6 +232,26 @@
                 }
                 slides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
+            }
+
+            // Check for saved dark mode preference in localStorage
+            const currentTheme = localStorage.getItem('theme');
+
+            // If dark mode was saved previously, apply it
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+
+            // Function to toggle dark mode
+            function toggleDarkMode() {
+                document.body.classList.toggle('dark-mode');
+
+                // Save the user's theme preference in localStorage
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
             }
         </script>
 </body>
